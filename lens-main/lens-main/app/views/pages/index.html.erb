@@ -1,0 +1,12 @@
+<!-- Thumbnail -->
+    <section id="thumbnails">
+         <% @image_data.each do |image| %>
+            <article>
+            <a class="thumbnail" href="<%= asset_url(image[:full]) %>" data-position="left center">
+                <%= image_tag image[:thumb] %>
+            </a>
+            <h2><%= image[:title] %></h2>
+            <p><%= image[:description] %></p>
+            </article>
+        <% end %>
+    </section>
